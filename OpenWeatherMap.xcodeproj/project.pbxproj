@@ -14,6 +14,16 @@
 		AE5A19AB25C052F30026ED12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A19A925C052F30026ED12 /* LaunchScreen.storyboard */; };
 		AE5A19B625C052F40026ED12 /* OpenWeatherMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19B525C052F40026ED12 /* OpenWeatherMapTests.swift */; };
 		AE5A19DE25C053540026ED12 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19DD25C053540026ED12 /* DetailViewController.swift */; };
+		AE5A19E825C054C70026ED12 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19E725C054C70026ED12 /* APIClient.swift */; };
+		AE5A19F525C055E30026ED12 /* Bundle+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */; };
+		AE5A1A0C25C056750026ED12 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A0B25C056750026ED12 /* Group.swift */; };
+		AE5A1A1125C0567C0026ED12 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1025C0567C0026ED12 /* City.swift */; };
+		AE5A1A1625C056880026ED12 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1525C056880026ED12 /* Weather.swift */; };
+		AE5A1A1B25C0568E0026ED12 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1A25C0568E0026ED12 /* Main.swift */; };
+		AE5A1A2325C056C50026ED12 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE5A1A2225C056C50026ED12 /* Keys.plist */; };
+		AE5A1A3B25C05AB20026ED12 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */; };
+		AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */; };
+		AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,16 @@
 		AE5A19B725C052F40026ED12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE5A19BC25C052F40026ED12 /* OpenWeatherMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5A19DD25C053540026ED12 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AE5A19E725C054C70026ED12 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Keys.swift"; sourceTree = "<group>"; };
+		AE5A1A0B25C056750026ED12 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AE5A1A1025C0567C0026ED12 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		AE5A1A1525C056880026ED12 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		AE5A1A1A25C0568E0026ED12 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		AE5A1A2225C056C50026ED12 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+WeatherIcon.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +115,12 @@
 		AE5A199D25C052F20026ED12 /* OpenWeatherMap */ = {
 			isa = PBXGroup;
 			children = (
+				AE5A1A2225C056C50026ED12 /* Keys.plist */,
+				AE5A1A0725C0566A0026ED12 /* Model */,
+				AE5A1A4C25C065940026ED12 /* Views */,
 				AE5A19E325C054820026ED12 /* View Controllers */,
+				AE5A1A0025C056620026ED12 /* Networking */,
+				AE5A19FC25C056580026ED12 /* Extensions */,
 				AE5A19E225C054740026ED12 /* Supporting Files */,
 			);
 			path = OpenWeatherMap;
@@ -129,6 +154,43 @@
 				AE5A19DD25C053540026ED12 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AE5A19FC25C056580026ED12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */,
+				AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */,
+				AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE5A1A0025C056620026ED12 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE5A19E725C054C70026ED12 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AE5A1A0725C0566A0026ED12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE5A1A0B25C056750026ED12 /* Group.swift */,
+				AE5A1A1025C0567C0026ED12 /* City.swift */,
+				AE5A1A1525C056880026ED12 /* Weather.swift */,
+				AE5A1A1A25C0568E0026ED12 /* Main.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE5A1A4C25C065940026ED12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5A1A2325C056C50026ED12 /* Keys.plist in Resources */,
 				AE5A19AB25C052F30026ED12 /* LaunchScreen.storyboard in Resources */,
 				AE5A19A825C052F30026ED12 /* Assets.xcassets in Resources */,
 				AE5A19A625C052F20026ED12 /* Main.storyboard in Resources */,
@@ -261,9 +324,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */,
+				AE5A1A1B25C0568E0026ED12 /* Main.swift in Sources */,
+				AE5A1A0C25C056750026ED12 /* Group.swift in Sources */,
+				AE5A19F525C055E30026ED12 /* Bundle+Keys.swift in Sources */,
 				AE5A19DE25C053540026ED12 /* DetailViewController.swift in Sources */,
+				AE5A1A1625C056880026ED12 /* Weather.swift in Sources */,
+				AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */,
+				AE5A1A3B25C05AB20026ED12 /* UIViewController+Alert.swift in Sources */,
 				AE5A19A325C052F20026ED12 /* ListViewController.swift in Sources */,
 				AE5A199F25C052F20026ED12 /* AppDelegate.swift in Sources */,
+				AE5A1A1125C0567C0026ED12 /* City.swift in Sources */,
+				AE5A19E825C054C70026ED12 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74Z568742B;
-				INFOPLIST_FILE = OpenWeatherMap/Info.plist;
+				INFOPLIST_FILE = "OpenWeatherMap/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = carlmorland.OpenWeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -459,7 +531,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74Z568742B;
-				INFOPLIST_FILE = OpenWeatherMap/Info.plist;
+				INFOPLIST_FILE = "OpenWeatherMap/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = carlmorland.OpenWeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
