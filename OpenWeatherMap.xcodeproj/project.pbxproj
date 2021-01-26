@@ -24,6 +24,7 @@
 		AE5A1A3B25C05AB20026ED12 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */; };
 		AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */; };
 		AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */; };
+		AE5A1A6D25C07ACB0026ED12 /* UIColor+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+WeatherIcon.swift"; sourceTree = "<group>"; };
+		AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Weather.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */,
 				AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */,
 				AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */,
+				AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				AE5A1A1B25C0568E0026ED12 /* Main.swift in Sources */,
 				AE5A1A0C25C056750026ED12 /* Group.swift in Sources */,
 				AE5A19F525C055E30026ED12 /* Bundle+Keys.swift in Sources */,
+				AE5A1A6D25C07ACB0026ED12 /* UIColor+Weather.swift in Sources */,
 				AE5A19DE25C053540026ED12 /* DetailViewController.swift in Sources */,
 				AE5A1A1625C056880026ED12 /* Weather.swift in Sources */,
 				AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */,

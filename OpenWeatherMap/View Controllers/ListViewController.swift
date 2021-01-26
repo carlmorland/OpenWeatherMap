@@ -16,12 +16,19 @@ let cityIds = [2643743 /* London, UK */,
 			   3143244 /* Oslo, NO */,
 			   1701668 /* Manila, PH */]
 
-class ListViewController: UITableViewController {
+class ListViewController: UIViewController, UITableViewDataSource {
 	
 	var cities = [City]()
+	
+	@IBOutlet var tableView: UITableView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		let gradient = CAGradientLayer()
+		gradient.frame = view.bounds
+		gradient.colors = [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.4980392157, green: 0.3137254902, blue: 0.6705882353, alpha: 1).cgColor]
+		view.layer.insertSublayer(gradient, at: 0)
 		
 		APIClient.shared.requestCurrentWeather(for: cityIds) { [weak self] (group, error) in
 			if let cities = group?.list {
@@ -37,17 +44,18 @@ class ListViewController: UITableViewController {
 		}
 	}
 
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return cities.count
 	}
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let city = cities[indexPath.row]
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ListTableViewCell
 		cell.iconImageView?.image = UIImage(weatherIcon: city.weather.first!.icon)
 		cell.nameLabel?.text = city.name
 		cell.tempLabel?.text = "\(Int((city.main.temp - 273.15).rounded()))c"
+		cell.gradient.colors = UIColor.gradientColors(weatherIcon: city.weather.first!.icon)
 		
 		return cell
 	}
