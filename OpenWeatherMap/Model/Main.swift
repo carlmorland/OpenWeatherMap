@@ -8,8 +8,8 @@
 import Foundation
 
 struct Main: Decodable {
-	let temp: Double
-	let feelsLike: Double
-	let tempMin: Double
-	let tempMax: Double
+	let temp: Kelvin
+	let feelsLike: Kelvin
+	let tempMin: Kelvin
+	let tempMax: Kelvin
 }
