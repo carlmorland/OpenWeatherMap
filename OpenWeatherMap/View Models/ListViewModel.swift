@@ -16,17 +16,16 @@ class ListViewModel {
 	
 	private var cities = [City]()
 	
-	init() {
-		APIClient.shared.requestCurrentWeather(for: cityIds) { [weak self] (cities, error) in
+	private let apiClient: APIClientProtocol
+	
+	init(apiClient: APIClientProtocol = APIClient()) {
+		self.apiClient = apiClient
+		apiClient.requestCurrentWeather(for: cityIds) { [weak self] (cities, error) in
 			if let cities = cities {
 				self?.cities = cities
-				DispatchQueue.main.async {
-					self?.cells.value = cities.map { CellViewModel(city: $0) }
-				}
+				self?.cells.value = cities.map { CellViewModel(city: $0) }
 			} else {
-				DispatchQueue.main.async {
-					self?.error.value = error
-				}
+				self?.error.value = error
 			}
 		}
 	}

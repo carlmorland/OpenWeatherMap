@@ -11,15 +11,18 @@ struct City: Decodable {
 	let weather: Weather
 	let temperatures: Temperatures
 	let name: String
+}
+
+extension City {
 	
 	private enum CodingKeys: String, CodingKey {
 		case weather
 		case temperatures = "main"
 		case name
 	}
-	
+
 	/// Treated as invalid if the array weather array is empty
-	
+
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		guard let weather = try values.decode([Weather].self, forKey: .weather).first else {
@@ -29,7 +32,7 @@ struct City: Decodable {
 		temperatures = try values.decode(Temperatures.self, forKey: .temperatures)
 		name = try values.decode(String.self, forKey: .name)
 	}
-	
+
 	enum DecodingError: Error {
 		case emptyWeatherArray
 	}

@@ -7,9 +7,11 @@
 
 import Foundation
 
-class APIClient {
-	
-	static let shared = APIClient()
+protocol APIClientProtocol {
+	func requestCurrentWeather(for cityIds: [Int], completion: @escaping ([City]?, Error?) -> Void)
+}
+
+class APIClient: APIClientProtocol {
 	
 	private let baseURL = "https://api.openweathermap.org/data/2.5"
 	
@@ -39,15 +41,19 @@ class APIClient {
 		let url = URL(string: baseURL + "/group?id=\(cityIdsCommaSeparatedString)&appid=\(apiKey)")!
 		
 		let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+			var cities: [City]?, _error: Error?
 			if let data = data {
 				do {
 					let group = try self.jsonDecoder.decode(Group.self, from: data)
-					completion(group.cities, nil)
+					cities = group.cities
 				} catch {
-					completion(nil, error)
+					_error = error
 				}
 			} else {
-				completion(nil, error)
+				_error = error
+			}
+			DispatchQueue.main.async {
+				completion(cities, _error)
 			}
 		})
 		
