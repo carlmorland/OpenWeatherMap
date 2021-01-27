@@ -26,7 +26,15 @@ class APIClient {
 		return jsonDecoder
 	}()
 	
-	func requestCurrentWeather(for cityIds: [Int], completion: @escaping (Group?, Error?) -> Void) {
+	private struct Group: Decodable {
+		let cities: [City]
+		
+		private enum CodingKeys: String, CodingKey {
+			case cities = "list"
+		}
+	}
+	
+	func requestCurrentWeather(for cityIds: [Int], completion: @escaping ([City]?, Error?) -> Void) {
 		let cityIdsCommaSeparatedString = cityIds.map{ String($0) }.joined(separator: ",")
 		let url = URL(string: baseURL + "/group?id=\(cityIdsCommaSeparatedString)&appid=\(apiKey)")!
 		
@@ -34,7 +42,7 @@ class APIClient {
 			if let data = data {
 				do {
 					let group = try self.jsonDecoder.decode(Group.self, from: data)
-					completion(group, nil)
+					completion(group.cities, nil)
 				} catch {
 					completion(nil, error)
 				}

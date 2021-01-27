@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 	
-	var viewModel: Observable<DetailViewModel?> = Observable(nil)
+	var viewModel: DetailViewModel!
 	
 	@IBOutlet var containerView: UIView!
 	@IBOutlet var iconImageView: UIImageView!
@@ -21,19 +21,19 @@ class DetailViewController: UIViewController {
 	@IBOutlet var highTempLabel: UILabel!
 	@IBOutlet var lowTempLabel: UILabel!
 	
-	private var gradient: CAGradientLayer!
+	var backgroundGradientLayer: CAGradientLayer!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		gradient = CAGradientLayer()
-		gradient.frame = view.bounds
-		view.layer.insertSublayer(gradient, at: 0)
+		backgroundGradientLayer = CAGradientLayer()
+		backgroundGradientLayer.frame = view.bounds
+		view.layer.insertSublayer(backgroundGradientLayer, at: 0)
 		
-		let topGradient = CAGradientLayer()
-		topGradient.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 147)
-		topGradient.colors =  [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 0).cgColor]
-		view.layer.insertSublayer(topGradient, above: gradient)
+		let headerGradientLayer = CAGradientLayer()
+		headerGradientLayer.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 147)
+		headerGradientLayer.colors =  [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 0).cgColor]
+		view.layer.insertSublayer(headerGradientLayer, above: backgroundGradientLayer)
 		
 		containerView.backgroundColor = .clear
 		containerView.layer.borderWidth = 1.5
@@ -44,24 +44,20 @@ class DetailViewController: UIViewController {
 		feelsLikeContainer.layer.cornerRadius = 15
 		feelsLikeContainer.clipsToBounds = true
 		
-		viewModel.bind { [weak self] (viewModel) in
-			guard let self = self, let viewModel = viewModel else {
-				return
-			}
-			self.gradient.colors =  UIColor.gradientColors(weatherIcon: viewModel.icon).reversed()
-			self.feelsLikeContainer.backgroundColor = UIColor.popColor(weatherIcon: viewModel.icon)
-			self.iconImageView.image = UIImage(weatherIcon: viewModel.icon)
-			self.tempLabel.text = viewModel.temp
-			self.nameLabel.text = viewModel.name
-			self.weatherDescriptionLabel.text = viewModel.weatherDescription
-			self.feelsLikeLabel.text = viewModel.feelsLike
-			self.highTempLabel.attributedText = self.format(viewModel.highTemp)
-			self.lowTempLabel.attributedText = self.format(viewModel.lowTemp)
-		}
+		backgroundGradientLayer.colors =  viewModel.backgroundGradient.colors.cgColors.reversed()
+		feelsLikeContainer.backgroundColor = viewModel.backgroundGradient.overlayColor
+		iconImageView.image = UIImage(named: viewModel.iconImageName)
+		tempLabel.text = viewModel.temperature
+		nameLabel.text = viewModel.cityName
+		weatherDescriptionLabel.text = viewModel.weatherDescription
+		feelsLikeLabel.text = viewModel.feelsLike
+		highTempLabel.attributedText = formattedString(for: viewModel.highTemp)
+		lowTempLabel.attributedText = formattedString(for: viewModel.lowTemp)
 	}
 	
-	/// Sets the first character (e.g. the 'H' in 'H 23c') to be bold
-	private func format(_ string: String) -> NSAttributedString {
+	/// Sets the first character to be bold
+	
+	private func formattedString(for string: String) -> NSAttributedString {
 		let attributedString = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
 		attributedString.addAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)], range: NSRange(location: 0, length: 1))
 		return attributedString

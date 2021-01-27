@@ -9,33 +9,28 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
 	
-	var viewModel: Observable<CellViewModel?> = Observable(nil)
-	
 	@IBOutlet var containerView: UIView!
 	@IBOutlet var iconImageView: UIImageView!
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var tempLabel: UILabel!
 	
-	var gradient: CAGradientLayer!
+	var backgroundGradientLayer: CAGradientLayer!
 	
 	override func awakeFromNib() {
 		containerView.layer.cornerRadius = 7
 		containerView.clipsToBounds = true
 		
-		gradient = CAGradientLayer()
-		gradient.frame = containerView.bounds
-		gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-		gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-		containerView.layer.insertSublayer(gradient, at: 0)
-		
-		viewModel.bind { [weak self] viewModel in
-			guard let viewModel = viewModel, let self = self else {
-				return
-			}
-			self.iconImageView?.image = UIImage(weatherIcon: viewModel.icon)
-			self.nameLabel?.text = viewModel.name
-			self.tempLabel?.text = viewModel.temp
-			self.gradient.colors = UIColor.gradientColors(weatherIcon: viewModel.icon)
-		}
+		backgroundGradientLayer = CAGradientLayer()
+		backgroundGradientLayer.frame = containerView.bounds
+		backgroundGradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+		backgroundGradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+		containerView.layer.insertSublayer(backgroundGradientLayer, at: 0)
+	}
+	
+	func configure(for viewModel: CellViewModel) {
+		iconImageView.image = UIImage(named: viewModel.iconImageName)
+		nameLabel.text = viewModel.cityName
+		tempLabel.text = viewModel.temperature
+		backgroundGradientLayer.colors = viewModel.backgroundGradient.colors.cgColors
 	}
 }

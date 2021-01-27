@@ -9,21 +9,41 @@ import Foundation
 
 struct DetailViewModel {
 	
-	let icon: String
-	let temp: String
-	let name: String
-	let weatherDescription: String
-	let feelsLike: String
-	let highTemp: String
-	let lowTemp: String
+	private let city: City
 	
 	init(city: City) {
-		icon = city.weather.first!.icon
-		temp = city.main.temp.celsiusString()
-		name = city.name
-		weatherDescription = city.weather.first!.main
-		feelsLike = "Feels like " + city.main.feelsLike.celsiusString()
-		highTemp = "H " + city.main.tempMax.celsiusString()
-		lowTemp = "L " + city.main.tempMin.celsiusString()
+		self.city = city
+	}
+	
+	var iconImageName: String {
+		city.weather.iconImageName
+	}
+	
+	var temperature: String {
+		city.temperatures.current.celsiusString()
+	}
+	
+	var cityName: String {
+		city.name
+	}
+	
+	var weatherDescription: String {
+		city.weather.description
+	}
+	
+	var feelsLike: String {
+		"Feels like \(city.temperatures.feelsLike.celsiusString())"
+	}
+	
+	var highTemp: String {
+		"H \(city.temperatures.tempMax.celsiusString())"
+	}
+	
+	var lowTemp: String {
+		"L \(city.temperatures.tempMin.celsiusString())"
+	}
+	
+	var backgroundGradient: Gradient {
+		city.weather.gradient
 	}
 }

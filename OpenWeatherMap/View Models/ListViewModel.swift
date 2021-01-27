@@ -17,8 +17,8 @@ class ListViewModel {
 	private var cities = [City]()
 	
 	init() {
-		APIClient.shared.requestCurrentWeather(for: cityIds) { [weak self] (group, error) in
-			if let cities = group?.list {
+		APIClient.shared.requestCurrentWeather(for: cityIds) { [weak self] (cities, error) in
+			if let cities = cities {
 				self?.cities = cities
 				DispatchQueue.main.async {
 					self?.cells.value = cities.map { CellViewModel(city: $0) }

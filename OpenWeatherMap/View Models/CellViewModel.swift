@@ -7,15 +7,27 @@
 
 import Foundation
 
-class CellViewModel {
+struct CellViewModel {
 	
-	let icon: String
-	let name: String
-	let temp: String
+	private let city: City
 	
 	init(city: City) {
-		icon = city.weather.first!.icon
-		name = city.name
-		temp = city.main.temp.celsiusString()
+		self.city = city
+	}
+	
+	var iconImageName: String {
+		city.weather.iconImageName
+	}
+	
+	var cityName: String {
+		city.name
+	}
+	
+	var temperature: String {
+		city.temperatures.current.celsiusString()
+	}
+	
+	var backgroundGradient: Gradient {
+		city.weather.gradient
 	}
 }

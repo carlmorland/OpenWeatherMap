@@ -20,7 +20,7 @@ class ListViewController: UIViewController, UITableViewDataSource {
 		
 		let gradient = CAGradientLayer()
 		gradient.frame = view.bounds
-		gradient.colors = [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.4980392157, green: 0.3137254902, blue: 0.6705882353, alpha: 1).cgColor]
+		gradient.colors = [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1), #colorLiteral(red: 0.4980392157, green: 0.3137254902, blue: 0.6705882353, alpha: 1)].cgColors
 		view.layer.insertSublayer(gradient, at: 0)
 		
 		viewModel.cells.bind { [weak self] _ in
@@ -29,6 +29,7 @@ class ListViewController: UIViewController, UITableViewDataSource {
 		
 		viewModel.error.bind { [weak self] error in
 			if error != nil {
+				print(error.debugDescription)
 				self?.showAlert(title: "An error occured")
 			}
 		}
@@ -40,13 +41,14 @@ class ListViewController: UIViewController, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ListTableViewCell
-		cell.viewModel.value = viewModel.cells.value[indexPath.row]
+		let cellViewModel = viewModel.cells.value[indexPath.row]
+		cell.configure(for: cellViewModel)
 		return cell
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let detail = segue.destination as? DetailViewController, let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
-			detail.viewModel.value = viewModel.detailViewModel(for: indexPath.row)
+			detail.viewModel = viewModel.detailViewModel(for: indexPath.row)
 		}
 	}
 }

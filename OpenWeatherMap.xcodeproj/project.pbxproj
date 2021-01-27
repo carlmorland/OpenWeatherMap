@@ -16,21 +16,21 @@
 		AE5A19DE25C053540026ED12 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19DD25C053540026ED12 /* DetailViewController.swift */; };
 		AE5A19E825C054C70026ED12 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19E725C054C70026ED12 /* APIClient.swift */; };
 		AE5A19F525C055E30026ED12 /* Bundle+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */; };
-		AE5A1A0C25C056750026ED12 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A0B25C056750026ED12 /* Group.swift */; };
 		AE5A1A1125C0567C0026ED12 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1025C0567C0026ED12 /* City.swift */; };
 		AE5A1A1625C056880026ED12 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1525C056880026ED12 /* Weather.swift */; };
-		AE5A1A1B25C0568E0026ED12 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1A25C0568E0026ED12 /* Main.swift */; };
+		AE5A1A1B25C0568E0026ED12 /* Temperatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A1A25C0568E0026ED12 /* Temperatures.swift */; };
 		AE5A1A2325C056C50026ED12 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE5A1A2225C056C50026ED12 /* Keys.plist */; };
 		AE5A1A3B25C05AB20026ED12 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */; };
 		AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */; };
-		AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */; };
-		AE5A1A6D25C07ACB0026ED12 /* UIColor+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */; };
+		AE5A1A5625C066F60026ED12 /* Weather+IconImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A5525C066F60026ED12 /* Weather+IconImageName.swift */; };
 		AE5A1A7325C089D80026ED12 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A7225C089D80026ED12 /* ListViewModel.swift */; };
 		AE5A1A7825C08A080026ED12 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A7725C08A080026ED12 /* CellViewModel.swift */; };
 		AE5A1A7D25C08A100026ED12 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A7C25C08A100026ED12 /* DetailViewModel.swift */; };
 		AE5A1A8325C08C6D0026ED12 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A8225C08C6D0026ED12 /* Observable.swift */; };
 		AE5A1AA825C097290026ED12 /* Kelvin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1AA725C097290026ED12 /* Kelvin.swift */; };
-		AE5A1AB825C097B40026ED12 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1AB725C097B40026ED12 /* Utilities.swift */; };
+		AE5A1AB825C097B40026ED12 /* Kelvin+CelsiusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1AB725C097B40026ED12 /* Kelvin+CelsiusString.swift */; };
+		AE5A1B1A25C175840026ED12 /* Weather+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1B1925C175840026ED12 /* Weather+Gradient.swift */; };
+		AE5A1B3625C17BBB0026ED12 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1B3525C17BBB0026ED12 /* WeatherIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,21 +65,21 @@
 		AE5A19DD25C053540026ED12 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AE5A19E725C054C70026ED12 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Keys.swift"; sourceTree = "<group>"; };
-		AE5A1A0B25C056750026ED12 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AE5A1A1025C0567C0026ED12 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		AE5A1A1525C056880026ED12 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		AE5A1A1A25C0568E0026ED12 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		AE5A1A1A25C0568E0026ED12 /* Temperatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperatures.swift; sourceTree = "<group>"; };
 		AE5A1A2225C056C50026ED12 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+WeatherIcon.swift"; sourceTree = "<group>"; };
-		AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Weather.swift"; sourceTree = "<group>"; };
+		AE5A1A5525C066F60026ED12 /* Weather+IconImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+IconImageName.swift"; sourceTree = "<group>"; };
 		AE5A1A7225C089D80026ED12 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		AE5A1A7725C08A080026ED12 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		AE5A1A7C25C08A100026ED12 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AE5A1A8225C08C6D0026ED12 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		AE5A1AA725C097290026ED12 /* Kelvin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kelvin.swift; sourceTree = "<group>"; };
-		AE5A1AB725C097B40026ED12 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AE5A1AB725C097B40026ED12 /* Kelvin+CelsiusString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kelvin+CelsiusString.swift"; sourceTree = "<group>"; };
+		AE5A1B1925C175840026ED12 /* Weather+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Gradient.swift"; sourceTree = "<group>"; };
+		AE5A1B3525C17BBB0026ED12 /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 				AE5A1A7125C089BA0026ED12 /* View Models */,
 				AE5A1A0025C056620026ED12 /* Networking */,
 				AE5A19FC25C056580026ED12 /* Extensions */,
-				AE5A1A8125C08C550026ED12 /* Helpers */,
+				AE5A1A8125C08C550026ED12 /* Binding */,
 				AE5A19E225C054740026ED12 /* Supporting Files */,
 			);
 			path = OpenWeatherMap;
@@ -167,8 +167,9 @@
 			children = (
 				AE5A19F425C055E20026ED12 /* Bundle+Keys.swift */,
 				AE5A1A3A25C05AB20026ED12 /* UIViewController+Alert.swift */,
-				AE5A1A5525C066F60026ED12 /* UIImage+WeatherIcon.swift */,
-				AE5A1A6C25C07ACB0026ED12 /* UIColor+Weather.swift */,
+				AE5A1A5525C066F60026ED12 /* Weather+IconImageName.swift */,
+				AE5A1B1925C175840026ED12 /* Weather+Gradient.swift */,
+				AE5A1AB725C097B40026ED12 /* Kelvin+CelsiusString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,10 +185,10 @@
 		AE5A1A0725C0566A0026ED12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AE5A1A0B25C056750026ED12 /* Group.swift */,
 				AE5A1A1025C0567C0026ED12 /* City.swift */,
 				AE5A1A1525C056880026ED12 /* Weather.swift */,
-				AE5A1A1A25C0568E0026ED12 /* Main.swift */,
+				AE5A1A1A25C0568E0026ED12 /* Temperatures.swift */,
+				AE5A1B3525C17BBB0026ED12 /* WeatherIcon.swift */,
 				AE5A1AA725C097290026ED12 /* Kelvin.swift */,
 			);
 			path = Model;
@@ -213,13 +214,12 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		AE5A1A8125C08C550026ED12 /* Helpers */ = {
+		AE5A1A8125C08C550026ED12 /* Binding */ = {
 			isa = PBXGroup;
 			children = (
 				AE5A1A8225C08C6D0026ED12 /* Observable.swift */,
-				AE5A1AB725C097B40026ED12 /* Utilities.swift */,
 			);
-			path = Helpers;
+			path = Binding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,14 +354,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */,
-				AE5A1A1B25C0568E0026ED12 /* Main.swift in Sources */,
+				AE5A1A1B25C0568E0026ED12 /* Temperatures.swift in Sources */,
 				AE5A1A7325C089D80026ED12 /* ListViewModel.swift in Sources */,
-				AE5A1A0C25C056750026ED12 /* Group.swift in Sources */,
+				AE5A1B1A25C175840026ED12 /* Weather+Gradient.swift in Sources */,
+				AE5A1B3625C17BBB0026ED12 /* WeatherIcon.swift in Sources */,
 				AE5A19F525C055E30026ED12 /* Bundle+Keys.swift in Sources */,
-				AE5A1A6D25C07ACB0026ED12 /* UIColor+Weather.swift in Sources */,
 				AE5A19DE25C053540026ED12 /* DetailViewController.swift in Sources */,
 				AE5A1A1625C056880026ED12 /* Weather.swift in Sources */,
-				AE5A1A5625C066F60026ED12 /* UIImage+WeatherIcon.swift in Sources */,
+				AE5A1A5625C066F60026ED12 /* Weather+IconImageName.swift in Sources */,
 				AE5A1A3B25C05AB20026ED12 /* UIViewController+Alert.swift in Sources */,
 				AE5A1A7825C08A080026ED12 /* CellViewModel.swift in Sources */,
 				AE5A19A325C052F20026ED12 /* ListViewController.swift in Sources */,
@@ -370,7 +370,7 @@
 				AE5A1A1125C0567C0026ED12 /* City.swift in Sources */,
 				AE5A19E825C054C70026ED12 /* APIClient.swift in Sources */,
 				AE5A1AA825C097290026ED12 /* Kelvin.swift in Sources */,
-				AE5A1AB825C097B40026ED12 /* Utilities.swift in Sources */,
+				AE5A1AB825C097B40026ED12 /* Kelvin+CelsiusString.swift in Sources */,
 				AE5A1A7D25C08A100026ED12 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
