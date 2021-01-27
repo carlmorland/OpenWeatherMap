@@ -46,6 +46,7 @@
 		AE5A1B7D25C1A5BE0026ED12 /* Weather+IconImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1A5525C066F60026ED12 /* Weather+IconImageName.swift */; };
 		AE5A1B8025C1A5C00026ED12 /* Weather+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1B1925C175840026ED12 /* Weather+Gradient.swift */; };
 		AE5A1B8325C1A5D50026ED12 /* Kelvin+CelsiusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1AB725C097B40026ED12 /* Kelvin+CelsiusString.swift */; };
+		AE5A1B8D25C1BA850026ED12 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A1B8C25C1BA850026ED12 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		AE5A1B1925C175840026ED12 /* Weather+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Gradient.swift"; sourceTree = "<group>"; };
 		AE5A1B3525C17BBB0026ED12 /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		AE5A1B4F25C1A2D90026ED12 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		AE5A1B8C25C1BA850026ED12 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				AE5A19A225C052F20026ED12 /* ListViewController.swift */,
 				AE5A1A4D25C065AB0026ED12 /* ListTableViewCell.swift */,
 				AE5A19DD25C053540026ED12 /* DetailViewController.swift */,
+				AE5A1B8C25C1BA850026ED12 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			files = (
 				AE5A1A4E25C065AB0026ED12 /* ListTableViewCell.swift in Sources */,
 				AE5A1A1B25C0568E0026ED12 /* Temperatures.swift in Sources */,
+				AE5A1B8D25C1BA850026ED12 /* GradientView.swift in Sources */,
 				AE5A1A7325C089D80026ED12 /* ListViewModel.swift in Sources */,
 				AE5A1B1A25C175840026ED12 /* Weather+Gradient.swift in Sources */,
 				AE5A1B3625C17BBB0026ED12 /* WeatherIcon.swift in Sources */,

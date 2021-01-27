@@ -21,19 +21,17 @@ class DetailViewController: UIViewController {
 	@IBOutlet var highTempLabel: UILabel!
 	@IBOutlet var lowTempLabel: UILabel!
 	
-	var backgroundGradientLayer: CAGradientLayer!
+	var gradientView: GradientView {
+		return view as! GradientView
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		backgroundGradientLayer = CAGradientLayer()
-		backgroundGradientLayer.frame = view.bounds
-		view.layer.insertSublayer(backgroundGradientLayer, at: 0)
-		
-		let headerGradientLayer = CAGradientLayer()
-		headerGradientLayer.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 147)
-		headerGradientLayer.colors =  [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 0).cgColor]
-		view.layer.insertSublayer(headerGradientLayer, above: backgroundGradientLayer)
+		let headerGradientView = GradientView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 147))
+		headerGradientView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+		headerGradientView.gradientLayer.colors =  [#colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 1).cgColor, #colorLiteral(red: 0.01960784314, green: 0.02745098039, blue: 0.2352941176, alpha: 0).cgColor]
+		view.insertSubview(headerGradientView, at: 0)
 		
 		containerView.backgroundColor = .clear
 		containerView.layer.borderWidth = 1.5
@@ -44,7 +42,7 @@ class DetailViewController: UIViewController {
 		feelsLikeContainer.layer.cornerRadius = 15
 		feelsLikeContainer.clipsToBounds = true
 		
-		backgroundGradientLayer.colors =  viewModel.backgroundGradient.colors.cgColors.reversed()
+		gradientView.gradientLayer.colors =  viewModel.backgroundGradient.colors.cgColors.reversed()
 		feelsLikeContainer.backgroundColor = viewModel.backgroundGradient.overlayColor
 		iconImageView.image = UIImage(named: viewModel.iconImageName)
 		tempLabel.text = viewModel.temperature
