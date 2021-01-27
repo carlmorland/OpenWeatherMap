@@ -129,7 +129,6 @@
 		AE5A199D25C052F20026ED12 /* OpenWeatherMap */ = {
 			isa = PBXGroup;
 			children = (
-				AE5A1A2225C056C50026ED12 /* Keys.plist */,
 				AE5A1A0725C0566A0026ED12 /* Model */,
 				AE5A1A4C25C065940026ED12 /* Views */,
 				AE5A1A7125C089BA0026ED12 /* View Models */,
@@ -157,6 +156,7 @@
 				AE5A199E25C052F20026ED12 /* AppDelegate.swift */,
 				AE5A19A425C052F20026ED12 /* Main.storyboard */,
 				AE5A19A725C052F30026ED12 /* Assets.xcassets */,
+				AE5A1A2225C056C50026ED12 /* Keys.plist */,
 				AE5A19A925C052F30026ED12 /* LaunchScreen.storyboard */,
 				AE5A19AC25C052F30026ED12 /* Info.plist */,
 			);
