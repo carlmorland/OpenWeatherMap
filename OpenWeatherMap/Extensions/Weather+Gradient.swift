@@ -16,6 +16,8 @@ enum Gradient {
 
 extension Weather {
 	
+	/// The gradient used is based on the weather icon code  e.g. clearDay is used for clearSkyDay (01d) and stormyDay is used for all non-clear day codes (fewCloudsDay (02d), scatteredCloudsDay (03d), brokenCloudsDay (04d), showerRainDay (09d), rainDay (10d), thunderstormDay (11d), snowDay (13d), mistDay (50d))
+	
 	var gradient: Gradient {
 		switch icon {
 		case .clearSkyDay:

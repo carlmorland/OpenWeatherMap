@@ -9,6 +9,8 @@ import UIKit
 
 extension Weather {
 	
+	/// The image used is based on the weather icon code  e.g. Sun is used for clearSkyDay (01d)
+	
 	var iconImageName: String {
 		switch icon {
 		case .clearSkyDay, .clearClearNight:

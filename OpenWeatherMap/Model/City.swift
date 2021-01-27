@@ -18,6 +18,8 @@ struct City: Decodable {
 		case name
 	}
 	
+	/// Treated as invalid if the array weather array is empty
+	
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		guard let weather = try values.decode([Weather].self, forKey: .weather).first else {
